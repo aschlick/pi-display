@@ -1,0 +1,12 @@
+{
+  "globals": {
+    "pug": true
+  },
+  "plugins": [
+    "react-pug"
+  ],
+  "extends": [
+    "react-app",
+    "plugin:react-pug/all"
+  ]
+}
