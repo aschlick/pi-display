@@ -21,8 +21,10 @@ class App extends Component {
               Link( id="NavLinkSpotify" to="/spotify" className="navbar-item" ) Spotify
               Link( id="NavLinkPlex" to="/plex" className="navbar-item" ) Plex
               Link( id="NavLinkServer" to="/server" className="navbar-item" ) SchlickServer
-      Route( id="NavRouteHome" exact=true path="/" component=${Dashboard} )
-      Route( id="NavRouteSpotify" path="/spotify" component=${Spotify} )
+      .container
+        section.section
+          Route( id="NavRouteHome" exact=true path="/" component=${Dashboard} )
+          Route( id="NavRouteSpotify" path="/spotify" component=${Spotify} )
     `;
   }
 }

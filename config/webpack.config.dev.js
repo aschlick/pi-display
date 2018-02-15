@@ -268,4 +268,9 @@ module.exports = {
   performance: {
     hints: false,
   },
+
+  // to include config files in as modules
+  externals: {
+    SpotifyConfig: JSON.stringify(require('./spotify.config.json'))
+  }
 };

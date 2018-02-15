@@ -9,7 +9,19 @@ class Card extends Component {
   header(){
     return pug`
       header.card-header
-        p.card-header-title
+        p.card-header-title ${this.title}
+    `;
+  }
+
+  image(){
+    return pug`
+      .card-image
+    `
+  }
+
+  body(){
+    return pug`
+      .card-content
     `;
   }
 
@@ -17,14 +29,16 @@ class Card extends Component {
     if(this.props.footer)
       return this.props.footer;
 
-    return pug`
-    `;
+    return;
   }
 
   render(){
     return pug`
       .card
-
+        ${this.header()}
+        ${this.image()}
+        ${this.body()}
+        ${this.footer()}
     `;
   }
 }
